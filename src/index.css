@@ -53,7 +53,7 @@ body {
 	grid-area: header;
 	color: var(--color-beige);
 	background-color: var(--color-yellow);
-	font-size: calc(4vw + 0.3rem);
+	font-size: calc(4vw + 2rem);
 	font-weight: bold;
 	text-align: center;
 	padding: 0;
@@ -65,34 +65,51 @@ body {
 }
 
 .main {
+	position: relative;
 	grid-area: main;
 	font-size: inherit;
 	padding: 1rem;
-	filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.2));
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 2fr;
-	grid-template-areas: 'input output';
-	grid-gap: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.main-btn {
+	z-index: 10;
+}
+
+.template {
+	margin-right: 1rem;
+}
+
+.reset {
+	margin-right: 0;
+}
+
+.template:hover,
+.reset:hover {
+	color: var(--color-beige);
 }
 
 .input {
-	grid-area: input;
 	background-color: var(--color-gray);
 	color: var(--color-white);
 	font-size: inherit;
 	padding: 1rem;
 	height: fit-content;
+	width: 595px;
+	filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.2));
 }
 
 .output {
-	grid-area: output;
 	background-color: var(--color-white);
 	color: var(--color-black);
 	height: 842px;
-	min-width: 595px;
+	width: 595px;
 	padding: 50px;
 	grid-gap: 16px;
+	filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.2));
 }
 
 .btn {
@@ -409,4 +426,12 @@ li {
 
 .skill-main li {
 	padding: 0 1rem 1rem 0;
+}
+
+/*responsive*/
+@media screen and (max-width: 620px) {
+	.output {
+		transform: scale(0.8);
+		min-width: 595px;
+	}
 }

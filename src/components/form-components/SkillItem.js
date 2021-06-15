@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SkillItem = ({ skill, id, handleChangeSkill, onSubmit, deleteSkill }) => {
+const SkillItem = ({ skill, id, handleChangeSkill, deleteSkill, onSubmit }) => {
 	return (
 		<div className="skill-form">
 			<form onSubmit={onSubmit} id={id}>
@@ -19,7 +19,8 @@ const SkillItem = ({ skill, id, handleChangeSkill, onSubmit, deleteSkill }) => {
 					className="btn delete-skill"
 					onClick={(e) => deleteSkill(e, id)}
 				>
-					<i className="fas fa-backspace"></i>
+					{/* <i className="fas fa-backspace"></i> */}
+					<i className="fas fa-trash-alt"></i>
 				</button>
 			</form>
 		</div>

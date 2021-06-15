@@ -2,13 +2,13 @@ import React from 'react';
 import EducationItem from './EducationItem';
 
 const Education = ({
-	education,
+	info,
 	addEducationBackground,
 	deleteEducationBackground,
 	handleChangeEducation,
 	onSubmit,
 }) => {
-	const educationItems = education.map((edu) => (
+	const educationItems = info.education.map((edu) => (
 		<EducationItem
 			key={edu.id}
 			id={edu.id}
@@ -21,9 +21,7 @@ const Education = ({
 	return (
 		<div className="education">
 			<div className="header-main">
-				<h2>
-					<i className="fas fa-school"></i> Education Background
-				</h2>
+				<h2>{/* <i className="fas fa-school"></i> */} Education Background</h2>
 				<button
 					type="button"
 					className="btn add"

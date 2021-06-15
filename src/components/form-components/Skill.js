@@ -2,13 +2,13 @@ import React from 'react';
 import SkillItem from './SkillItem';
 
 const Skill = ({
-	skills,
+	info,
 	addSkill,
 	deleteSkill,
 	handleChangeSkill,
 	onSubmit,
 }) => {
-	const skillItems = skills.map((skill) => (
+	const skillItems = info.skills.map((skill) => (
 		<SkillItem
 			key={skill.id}
 			id={skill.id}
@@ -21,9 +21,7 @@ const Skill = ({
 	return (
 		<div className="skill">
 			<div className="header-main">
-				<h2>
-					<i className="fas fa-tools"></i> Skills
-				</h2>
+				<h2>{/* <i className="fas fa-tools"></i> */} Skills</h2>
 				<button type="button" className="btn add" onClick={addSkill}>
 					<i className="fas fa-plus-square"></i>
 				</button>

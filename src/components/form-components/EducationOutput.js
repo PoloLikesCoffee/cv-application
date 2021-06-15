@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EducationOutput = (props) => {
-	const { education } = props;
+	const { info } = props;
 
 	return (
 		<div className="education-output">
@@ -9,7 +9,7 @@ const EducationOutput = (props) => {
 				<h2>Education Background</h2>
 			</div>
 			<ul>
-				{education.map((edu) => {
+				{info.education.map((edu) => {
 					return (
 						<li key={edu.id}>
 							<div className="header-education">

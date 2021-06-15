@@ -1,12 +1,18 @@
 import React from 'react';
 
-const General = ({ fullName, title, email, phone, onChange, onSubmit }) => {
+const General = ({ info, onChange, onSubmit, loadTemplate, resetForm }) => {
 	return (
 		<div className="general">
 			<div className="header-main">
-				<h2>
-					<i className="fas fa-info"></i> General Information
-				</h2>
+				<h2>{/* <i className="fas fa-info"></i> */} General Information</h2>
+				<div className="main-btn ">
+					<button className="btn template" onClick={loadTemplate}>
+						Template
+					</button>
+					<button className="btn reset" onClick={resetForm}>
+						Reset
+					</button>
+				</div>
 			</div>
 
 			<div className="general-form">
@@ -20,7 +26,7 @@ const General = ({ fullName, title, email, phone, onChange, onSubmit }) => {
 							className="form-control"
 							name="fullName"
 							onChange={onChange}
-							value={fullName}
+							value={info.general.fullName}
 						/>
 					</div>
 					<div className="info2">
@@ -32,7 +38,7 @@ const General = ({ fullName, title, email, phone, onChange, onSubmit }) => {
 							className="form-control"
 							name="title"
 							onChange={onChange}
-							value={title}
+							value={info.general.title}
 						/>
 					</div>
 					<div className="info3">
@@ -44,7 +50,7 @@ const General = ({ fullName, title, email, phone, onChange, onSubmit }) => {
 							className="form-control"
 							name="email"
 							onChange={onChange}
-							value={email}
+							value={info.general.email}
 						/>
 					</div>
 					<div className="info4">
@@ -56,7 +62,7 @@ const General = ({ fullName, title, email, phone, onChange, onSubmit }) => {
 							className="form-control"
 							name="phone"
 							onChange={onChange}
-							value={phone}
+							value={info.general.phone}
 						/>
 					</div>
 				</form>

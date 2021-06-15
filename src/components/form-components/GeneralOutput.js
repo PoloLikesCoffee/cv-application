@@ -1,21 +1,21 @@
 import React from 'react';
 
 const GeneralOutput = (props) => {
-	const { fullName, title, email, phone } = props;
+	const { info } = props;
 
 	return (
 		<>
 			<div className="general-output">
 				<div className="main-info">
-					<h1>{fullName}</h1>
-					<h2>{title}</h2>
+					<h1>{info.general.fullName}</h1>
+					<h2>{info.general.title}</h2>
 				</div>
 				<div className="contact-info">
 					<span>
-						<i className="fas fa-at"></i> {email}
+						{/* <i className="fas fa-at"></i> */} {info.general.email}
 					</span>
 					<span>
-						<i className="fas fa-mobile-alt"></i> {phone}
+						{/* <i className="fas fa-mobile-alt"></i> */} {info.general.phone}
 					</span>
 				</div>
 			</div>

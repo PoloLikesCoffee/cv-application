@@ -4,8 +4,8 @@ const WorkItem = ({
 	work,
 	id,
 	handleChangeWork,
-	onSubmit,
 	deleteWorkExperience,
+	onSubmit,
 }) => {
 	return (
 		<div className="work-form">

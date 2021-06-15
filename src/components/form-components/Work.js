@@ -2,13 +2,13 @@ import React from 'react';
 import WorkItem from './WorkItem';
 
 const Work = ({
-	works,
+	info,
 	addWorkExperience,
 	deleteWorkExperience,
 	handleChangeWork,
 	onSubmit,
 }) => {
-	const workItems = works.map((work) => (
+	const workItems = info.works.map((work) => (
 		<WorkItem
 			key={work.id}
 			id={work.id}
@@ -21,9 +21,7 @@ const Work = ({
 	return (
 		<div className="work">
 			<div className="header-main">
-				<h2>
-					<i className="fas fa-briefcase"></i> Work Experience
-				</h2>
+				<h2>{/* <i className="fas fa-briefcase"></i> */} Work Experience</h2>
 				<button type="button" className="btn add" onClick={addWorkExperience}>
 					<i className="fas fa-plus-square"></i>
 				</button>

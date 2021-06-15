@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WorkOutput = (props) => {
-	const { works } = props;
+	const { info } = props;
 
 	return (
 		<div className="work-output">
@@ -9,7 +9,7 @@ const WorkOutput = (props) => {
 				<h2>Work Experience</h2>
 			</div>
 			<ul>
-				{works.map((work) => {
+				{info.works.map((work) => {
 					return (
 						<li key={work.id}>
 							<div className="header-work">

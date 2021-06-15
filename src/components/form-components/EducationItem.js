@@ -4,8 +4,8 @@ const EducationItem = ({
 	edu,
 	id,
 	handleChangeEducation,
-	onSubmit,
 	deleteEducationBackground,
+	onSubmit,
 }) => {
 	return (
 		<div className="education-form">
